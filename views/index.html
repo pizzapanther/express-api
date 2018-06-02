@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello API</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      var api_url = '/api';
+      
+      axios.get(api_url)
+        .then(function (response) {
+          document.querySelector('body').innerHTML = JSON.stringify(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    </script>
+  </head>
+  <body>
+    hello API
+  </body>
+</html>
